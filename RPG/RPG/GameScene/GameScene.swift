@@ -16,6 +16,5 @@ class GameScene: SKScene {
     //viewDidLoad
     override func didMove(to view: SKView) {
         self.addChild(Player)
-       
     }
 }
