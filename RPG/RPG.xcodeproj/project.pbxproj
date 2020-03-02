@@ -60,10 +60,10 @@
 		3C39AC02240D27A2002EB0F6 /* RPG */ = {
 			isa = PBXGroup;
 			children = (
+				3C39AC1B240D2A34002EB0F6 /* GameScene */,
+				3C39AC1C240D3315002EB0F6 /* Map */,
 				3C39AC03240D27A2002EB0F6 /* AppDelegate.swift */,
-				3C39AC05240D27A2002EB0F6 /* GameScene.sks */,
 				3C39AC07240D27A2002EB0F6 /* Actions.sks */,
-				3C39AC09240D27A2002EB0F6 /* GameScene.swift */,
 				3C39AC0B240D27A2002EB0F6 /* GameViewController.swift */,
 				3C39AC0D240D27A2002EB0F6 /* Main.storyboard */,
 				3C39AC10240D27A8002EB0F6 /* Assets.xcassets */,
@@ -71,6 +71,22 @@
 				3C39AC15240D27A8002EB0F6 /* Info.plist */,
 			);
 			path = RPG;
+			sourceTree = "<group>";
+		};
+		3C39AC1B240D2A34002EB0F6 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				3C39AC09240D27A2002EB0F6 /* GameScene.swift */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
+		3C39AC1C240D3315002EB0F6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3C39AC05240D27A2002EB0F6 /* GameScene.sks */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
