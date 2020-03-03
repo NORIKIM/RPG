@@ -15,7 +15,9 @@ extension GameScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self) // 터치를 한 포인트
-            Player.position = CGPoint(x: location.x, y: location.y) // 플레이어의 위치를 location으로 변경해라
+            /*let walkAction = SKAction.move(to: location, duration: 5) // duration시간동안 이동
+            Player.run(walkAction) // 플레이어의 위치를 location으로 변경해라*/
+            touchPoint = location
         }
     }
     // touch End
