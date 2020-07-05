@@ -12,9 +12,24 @@ import GameplayKit
 class GameScene: SKScene {
     
     let Player = SKSpriteNode(imageNamed: "RedSwan")
-    var touchPoint = CGPoint() 
+    let controlBase = SKSpriteNode(imageNamed: "ControlBase")
+    let controlBall = SKSpriteNode(imageNamed: "ControlBall")
+    
+    //var touchPoint = CGPoint()
     //viewDidLoad
     override func didMove(to view: SKView) {
+        controlBase.position = CGPoint(x: -500, y: -200)
+        controlBase.zPosition = 100
+        controlBase.alpha = 0.5
+        
+        controlBall.position = controlBase.position
+        controlBall.zPosition = controlBase.zPosition
+        controlBall.alpha = controlBase.alpha
+        
+        Player.zPosition = 10
+        
+        self.addChild(controlBase)
+        self.addChild(controlBall)
         self.addChild(Player)
     }
 }
