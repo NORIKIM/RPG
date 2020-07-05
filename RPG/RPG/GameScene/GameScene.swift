@@ -21,15 +21,14 @@ class GameScene: SKScene {
         controlBase.position = CGPoint(x: -500, y: -200)
         controlBase.zPosition = 100
         controlBase.alpha = 0.5
+        self.addChild(controlBase)
         
         controlBall.position = controlBase.position
         controlBall.zPosition = controlBase.zPosition
         controlBall.alpha = controlBase.alpha
+        self.addChild(controlBall)
         
         Player.zPosition = 10
-        
-        self.addChild(controlBase)
-        self.addChild(controlBall)
         self.addChild(Player)
     }
 }
