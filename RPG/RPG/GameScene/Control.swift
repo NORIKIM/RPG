@@ -34,40 +34,59 @@ extension GameScene {
             /*let walkAction = SKAction.move(to: location, duration: 5) // duration시간동안 이동
             Player.run(walkAction) // 플레이어의 위치를 location으로 변경해라*/
             
-            //touchPoint = location
-            controlBase.position = location
-            controlBall.position = controlBase.position
+            if location.x < 0 { // 터치 위치가 화면 우측으로 갔을 때
+                //touchPoint = location
+                controlBase.position = location
+                controlBall.position = controlBase.position
+            } else { // 화면 우측의 버튼 터치 시
+                if attackButtonBase.frame.contains(location) {
+                    print("attack")
+                } else if itemButtonBase.frame.contains(location) {
+                    print("item")
+                } else if skillButtonBase.frame.contains(location){
+                    print("skill")
+                }
+            }
+            
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
-            let DeltaX = location.x - controlBase.position.x
-            let DeltaY = location.y - controlBase.position.y
-            let angle = atan2(DeltaY, DeltaX) // 밑변과 윗변을 줘서 탄젠트 값을 구함
-            let degree = angle * CGFloat(180 / Double.pi)
             
-            controllBallAngel(degree: degree)
-            
-            let length = controlBase.frame.size.height / 2
-            let distanceX = cos(angle) * length
-            let distanceY = sin(angle) * length
-            
-            if controlBase.frame.contains(location) { // 터치 포인트가 베이스 안의 영역으로 들어오면
-                controlBall.position = location // 컨트롤 베이스 안에서 볼을 터치
-            } else {
-                // 컨트롤 베이스 밖에서 터치가 생기더라도 베이스 포지션 x,y 값안에서 움직이도록 한다
-                controlBall.position = CGPoint(x: controlBase.position.x + distanceX, y: controlBase.position.y + distanceY)
+            if location.x < 0 {
+                let DeltaX = location.x - controlBase.position.x
+                let DeltaY = location.y - controlBase.position.y
+                let angle = atan2(DeltaY, DeltaX) // 밑변과 윗변을 줘서 탄젠트 값을 구함
+                let degree = angle * CGFloat(180 / Double.pi)
+                
+                controllBallAngel(degree: degree)
+                
+                let length = controlBase.frame.size.height / 2
+                let distanceX = cos(angle) * length
+                let distanceY = sin(angle) * length
+                
+                if controlBase.frame.contains(location) { // 터치 포인트가 베이스 안의 영역으로 들어오면
+                    controlBall.position = location // 컨트롤 베이스 안에서 볼을 터치
+                } else {
+                    // 컨트롤 베이스 밖에서 터치가 생기더라도 베이스 포지션 x,y 값안에서 움직이도록 한다
+                    controlBall.position = CGPoint(x: controlBase.position.x + distanceX, y: controlBase.position.y + distanceY)
+                }
             }
         }
     }
     
     // 터치가 끝나면 컨트롤 볼을 제자리로
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let moveCenterAction = SKAction.move(to: controlBase.position, duration: 0.2)
-        moveCenterAction.timingMode = .easeOut // 빨리 움직였다가 천천히 움직이게 해주는 효과
-        
-        controlBall.run(moveCenterAction)
+        for touch in touches {
+            let location = touch.location(in: self)
+            if location.x < 0 {
+                let moveCenterAction = SKAction.move(to: controlBase.position, duration: 0.2)
+                moveCenterAction.timingMode = .easeOut // 빨리 움직였다가 천천히 움직이게 해주는 효과
+                
+                controlBall.run(moveCenterAction)
+            }
+        }
     }
 }
