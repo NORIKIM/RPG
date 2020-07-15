@@ -17,6 +17,7 @@
 		3C39AC14240D27A8002EB0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C39AC12240D27A8002EB0F6 /* LaunchScreen.storyboard */; };
 		3C39AC1E240D3684002EB0F6 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39AC1D240D3684002EB0F6 /* Control.swift */; };
 		3C39AC20240E8AE2002EB0F6 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39AC1F240E8AE2002EB0F6 /* Update.swift */; };
+		3CA21BAC24BF2E1B000C26B8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA21BAB24BF2E1B000C26B8 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3C39AC15240D27A8002EB0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C39AC1D240D3684002EB0F6 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		3C39AC1F240E8AE2002EB0F6 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		3CA21BAB24BF2E1B000C26B8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				3C39AC1B240D2A34002EB0F6 /* GameScene */,
 				3C39AC1C240D3315002EB0F6 /* Map */,
+				3CA21BAA24BF2D50000C26B8 /* Character */,
 				3C39AC03240D27A2002EB0F6 /* AppDelegate.swift */,
 				3C39AC07240D27A2002EB0F6 /* Actions.sks */,
 				3C39AC0B240D27A2002EB0F6 /* GameViewController.swift */,
@@ -93,6 +96,14 @@
 				3C39AC05240D27A2002EB0F6 /* GameScene.sks */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		3CA21BAA24BF2D50000C26B8 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				3CA21BAB24BF2E1B000C26B8 /* Character.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				3C39AC0A240D27A2002EB0F6 /* GameScene.swift in Sources */,
 				3C39AC1E240D3684002EB0F6 /* Control.swift in Sources */,
 				3C39AC20240E8AE2002EB0F6 /* Update.swift in Sources */,
+				3CA21BAC24BF2E1B000C26B8 /* Character.swift in Sources */,
 				3C39AC0C240D27A2002EB0F6 /* GameViewController.swift in Sources */,
 				3C39AC04240D27A2002EB0F6 /* AppDelegate.swift in Sources */,
 			);

@@ -14,15 +14,15 @@ extension GameScene {
     // 컨트롤 볼을 이용해서 캐릭터의 방향을 정해준다.
     func controllBallAngel(degree: CGFloat) {
         if degree >= -45 && degree < 45 {
-            print("Player's current direction is EAST")
+            Player.currentDirection = "Player's current direction is EAST"
         } else if degree >= 45 && degree < 135 {
-            print("Player's current direction is NORTH")
+            Player.currentDirection = "Player's current direction is NORTH"
         } else if degree >= 135 && degree < 180 {
-            print("Player's current direction is WEST")
+            Player.currentDirection = "Player's current direction is WEST"
         } else if degree >= -180 && degree < -135 {
-            print("Player's current direction is WEST")
+            Player.currentDirection = "Player's current direction is WEST"
         } else if degree >= -135 && degree < -45 {
-            print("Player's current direction is SOUTH")
+            Player.currentDirection = "Player's current direction is SOUTH"
         }
     }
     
@@ -86,6 +86,7 @@ extension GameScene {
                 moveCenterAction.timingMode = .easeOut // 빨리 움직였다가 천천히 움직이게 해주는 효과
                 
                 controlBall.run(moveCenterAction)
+                Player.currentDirection = "Player's current direction is STOP"
             }
         }
     }

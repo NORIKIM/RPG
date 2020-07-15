@@ -11,7 +11,7 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    let Player = SKSpriteNode(imageNamed: "RedSwan")
+    let Player = Character(imageNamed: "RedSwan")
     let controlBase = SKSpriteNode(imageNamed: "ControlBase")
     let controlBall = SKSpriteNode(imageNamed: "ControlBall")
     let attackButtonBase = SKSpriteNode(imageNamed: "ButtonBase")
