@@ -23,6 +23,7 @@ extension GameScene {
         } else if Player.position.y > touchPoint.y + 5 {
             Player.position.y = Player.position.y - 5
         }*/
-        print(Player.currentDirection)
+        //print(Player.currentDirection)
+        Player.Function_Move()
     }
 }

@@ -10,5 +10,9 @@ import SpriteKit
 import GameplayKit
 
 class Character: SKSpriteNode {
-    var currentDirection = "Player's current direction is STOP"
+    var currentDirection = Direction.stop //"Player's current direction is STOP"
+    // 이동속도
+    let sp = CGFloat(5) // 따라서 스피드는 무조건 5
+    var speedX = CGFloat()
+    var speedY = CGFloat()
 }
