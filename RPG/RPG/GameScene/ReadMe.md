@@ -17,3 +17,9 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 ## 컨트롤러
 
 <img src="https://user-images.githubusercontent.com/31604976/86532965-c725ac80-bf08-11ea-87df-06913e623be1.gif">
+
+
+
+## 컨트롤러로 캐릭터 이동
+
+<img src ="https://user-images.githubusercontent.com/31604976/87868552-e96ffd80-c9d1-11ea-92a4-957213e85b01.gif">
