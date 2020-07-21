@@ -17,6 +17,10 @@
 		3C39AC14240D27A8002EB0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C39AC12240D27A8002EB0F6 /* LaunchScreen.storyboard */; };
 		3C39AC1E240D3684002EB0F6 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39AC1D240D3684002EB0F6 /* Control.swift */; };
 		3C39AC20240E8AE2002EB0F6 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39AC1F240E8AE2002EB0F6 /* Update.swift */; };
+		3C652B7624C7180900400309 /* RedSwanMoveE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3C652B7224C7180900400309 /* RedSwanMoveE.atlas */; };
+		3C652B7724C7180900400309 /* RedSwanMoveW.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3C652B7324C7180900400309 /* RedSwanMoveW.atlas */; };
+		3C652B7824C7180900400309 /* RedSwanMoveS.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3C652B7424C7180900400309 /* RedSwanMoveS.atlas */; };
+		3C652B7924C7180900400309 /* RedSwanMoveN.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3C652B7524C7180900400309 /* RedSwanMoveN.atlas */; };
 		3CA21BAC24BF2E1B000C26B8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA21BAB24BF2E1B000C26B8 /* Character.swift */; };
 		3CA21BAE24BF3219000C26B8 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA21BAD24BF3219000C26B8 /* Share.swift */; };
 		3CA21BB124BF3444000C26B8 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA21BB024BF3444000C26B8 /* Move.swift */; };
@@ -35,6 +39,10 @@
 		3C39AC15240D27A8002EB0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C39AC1D240D3684002EB0F6 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		3C39AC1F240E8AE2002EB0F6 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		3C652B7224C7180900400309 /* RedSwanMoveE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = RedSwanMoveE.atlas; path = "../../../1. Code/1. Code/6. NPC/Part 1_NPC/RPG/Image/Move/RedSwanMoveE.atlas"; sourceTree = "<group>"; };
+		3C652B7324C7180900400309 /* RedSwanMoveW.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = RedSwanMoveW.atlas; path = "../../../1. Code/1. Code/6. NPC/Part 1_NPC/RPG/Image/Move/RedSwanMoveW.atlas"; sourceTree = "<group>"; };
+		3C652B7424C7180900400309 /* RedSwanMoveS.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = RedSwanMoveS.atlas; path = "../../../1. Code/1. Code/6. NPC/Part 1_NPC/RPG/Image/Move/RedSwanMoveS.atlas"; sourceTree = "<group>"; };
+		3C652B7524C7180900400309 /* RedSwanMoveN.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = RedSwanMoveN.atlas; path = "../../../1. Code/1. Code/6. NPC/Part 1_NPC/RPG/Image/Move/RedSwanMoveN.atlas"; sourceTree = "<group>"; };
 		3CA21BAB24BF2E1B000C26B8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3CA21BAD24BF3219000C26B8 /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		3CA21BB024BF3444000C26B8 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
@@ -73,12 +81,12 @@
 				3C39AC1B240D2A34002EB0F6 /* GameScene */,
 				3C39AC1C240D3315002EB0F6 /* Map */,
 				3CA21BAA24BF2D50000C26B8 /* Character */,
+				3C652B7124C717B600400309 /* Image */,
 				3CA21BAF24BF3226000C26B8 /* Supporting File */,
 				3C39AC03240D27A2002EB0F6 /* AppDelegate.swift */,
 				3C39AC07240D27A2002EB0F6 /* Actions.sks */,
 				3C39AC0B240D27A2002EB0F6 /* GameViewController.swift */,
 				3C39AC0D240D27A2002EB0F6 /* Main.storyboard */,
-				3C39AC10240D27A8002EB0F6 /* Assets.xcassets */,
 				3C39AC12240D27A8002EB0F6 /* LaunchScreen.storyboard */,
 				3C39AC15240D27A8002EB0F6 /* Info.plist */,
 			);
@@ -101,6 +109,18 @@
 				3C39AC05240D27A2002EB0F6 /* GameScene.sks */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		3C652B7124C717B600400309 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				3C652B7224C7180900400309 /* RedSwanMoveE.atlas */,
+				3C652B7524C7180900400309 /* RedSwanMoveN.atlas */,
+				3C652B7424C7180900400309 /* RedSwanMoveS.atlas */,
+				3C652B7324C7180900400309 /* RedSwanMoveW.atlas */,
+				3C39AC10240D27A8002EB0F6 /* Assets.xcassets */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		3CA21BAA24BF2D50000C26B8 /* Character */ = {
@@ -188,9 +208,13 @@
 			files = (
 				3C39AC0F240D27A2002EB0F6 /* Main.storyboard in Resources */,
 				3C39AC06240D27A2002EB0F6 /* GameScene.sks in Resources */,
+				3C652B7924C7180900400309 /* RedSwanMoveN.atlas in Resources */,
 				3C39AC11240D27A8002EB0F6 /* Assets.xcassets in Resources */,
+				3C652B7824C7180900400309 /* RedSwanMoveS.atlas in Resources */,
 				3C39AC14240D27A8002EB0F6 /* LaunchScreen.storyboard in Resources */,
 				3C39AC08240D27A2002EB0F6 /* Actions.sks in Resources */,
+				3C652B7724C7180900400309 /* RedSwanMoveW.atlas in Resources */,
+				3C652B7624C7180900400309 /* RedSwanMoveE.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
