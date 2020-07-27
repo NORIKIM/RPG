@@ -40,7 +40,7 @@ class GameScene: SKScene {
         self.addChild(attackButtonBase)
         attackButton.position = attackButtonBase.position
         attackButton.zPosition = 100
-        attackButton.alpha = attackButtonBase.alpha
+        attackButton.alpha = 1
         self.addChild(attackButton)
         
         itemButtonBase.position = CGPoint(x: 350, y: -300)
@@ -49,7 +49,7 @@ class GameScene: SKScene {
         self.addChild(itemButtonBase)
         itemButton.position = itemButtonBase.position
         itemButton.zPosition = 100
-        itemButton.alpha = itemButtonBase.alpha
+        itemButton.alpha = 1
         self.addChild(itemButton)
         
         skillButtonBase.position = CGPoint(x: 550, y: -200)
@@ -58,7 +58,7 @@ class GameScene: SKScene {
         self.addChild(skillButtonBase)
         skillButton.position = skillButtonBase.position
         skillButton.zPosition = 100
-        skillButton.alpha = skillButtonBase.alpha
+        skillButton.alpha = 1
         self.addChild(skillButton)
         
         Player.zPosition = 10

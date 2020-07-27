@@ -32,7 +32,10 @@ extension Character {
                 if lastDirection == Direction.north {
                     self.texture = SKTexture(imageNamed: "RedSwanMoveN1")
                 }
+                
+                attachDirection = lastDirection
             }
+            lastDirection = currentDirection
         case .east:
             speedX = sp
             speedY = 0
@@ -52,6 +55,8 @@ extension Character {
                 
                 let moveAnimationAction = SKAction.repeatForever(SKAction.animate(with: moveFrame, timePerFrame: 0.125))// 동쪽으로 가는 동안은 계속 반복해준다 //moveFrame안의 이미지파일들을 0.125초 마다 반복해서 보여준다
                 self.run(moveAnimationAction, withKey: "move")
+                
+                attachDirection = currentDirection
             }
             lastDirection = currentDirection
         case .west:
@@ -61,7 +66,7 @@ extension Character {
             if currentDirection != lastDirection {
                 let moveAtlas = SKTextureAtlas(named: "RedSwanMoveW")
                 var moveFrame = [SKTexture]()
-  
+                
                 for i in 1...moveAtlas.textureNames.count / 2 {
                     let textureName = "RedSwanMoveW" + "\(i)"
                     moveFrame.append(moveAtlas.textureNamed(textureName))
@@ -69,6 +74,8 @@ extension Character {
                 
                 let moveAnimationAction = SKAction.repeatForever(SKAction.animate(with: moveFrame, timePerFrame: 0.125))
                 self.run(moveAnimationAction, withKey: "move")
+                
+                attachDirection = currentDirection
             }
             lastDirection = currentDirection
             
@@ -77,36 +84,40 @@ extension Character {
             speedY = -sp
             
             if currentDirection != lastDirection {
-                           let moveAtlas = SKTextureAtlas(named: "RedSwanMoveS")
-                           var moveFrame = [SKTexture]()
-             
-                           for i in 1...moveAtlas.textureNames.count / 2 {
-                               let textureName = "RedSwanMoveS" + "\(i)"
-                               moveFrame.append(moveAtlas.textureNamed(textureName))
-                           }
-                           
-                           let moveAnimationAction = SKAction.repeatForever(SKAction.animate(with: moveFrame, timePerFrame: 0.125))
-                           self.run(moveAnimationAction, withKey: "move")
-                       }
-                       lastDirection = currentDirection
+                let moveAtlas = SKTextureAtlas(named: "RedSwanMoveS")
+                var moveFrame = [SKTexture]()
+                
+                for i in 1...moveAtlas.textureNames.count / 2 {
+                    let textureName = "RedSwanMoveS" + "\(i)"
+                    moveFrame.append(moveAtlas.textureNamed(textureName))
+                }
+                
+                let moveAnimationAction = SKAction.repeatForever(SKAction.animate(with: moveFrame, timePerFrame: 0.125))
+                self.run(moveAnimationAction, withKey: "move")
+                
+                attachDirection = currentDirection
+            }
+            lastDirection = currentDirection
             
         case .north:
             speedX = 0
             speedY = sp
             
             if currentDirection != lastDirection {
-                           let moveAtlas = SKTextureAtlas(named: "RedSwanMoveN")
-                           var moveFrame = [SKTexture]()
-             
-                           for i in 1...moveAtlas.textureNames.count / 2 {
-                               let textureName = "RedSwanMoveN" + "\(i)"
-                               moveFrame.append(moveAtlas.textureNamed(textureName))
-                           }
-                           
-                           let moveAnimationAction = SKAction.repeatForever(SKAction.animate(with: moveFrame, timePerFrame: 0.125))
-                           self.run(moveAnimationAction, withKey: "move")
-                       }
-                       lastDirection = currentDirection
+                let moveAtlas = SKTextureAtlas(named: "RedSwanMoveN")
+                var moveFrame = [SKTexture]()
+                
+                for i in 1...moveAtlas.textureNames.count / 2 {
+                    let textureName = "RedSwanMoveN" + "\(i)"
+                    moveFrame.append(moveAtlas.textureNamed(textureName))
+                }
+                
+                let moveAnimationAction = SKAction.repeatForever(SKAction.animate(with: moveFrame, timePerFrame: 0.125))
+                self.run(moveAnimationAction, withKey: "move")
+                
+                attachDirection = currentDirection
+            }
+            lastDirection = currentDirection
             
         }
         self.position = CGPoint(x: self.position.x + speedX, y: self.position.y + speedY)

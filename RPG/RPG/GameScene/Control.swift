@@ -40,7 +40,7 @@ extension GameScene {
                 controlBall.position = controlBase.position
             } else { // 화면 우측의 버튼 터치 시
                 if attackButtonBase.frame.contains(location) {
-                    print("attack")
+                    Player.attack_Melee()
                 } else if itemButtonBase.frame.contains(location) {
                     print("item")
                 } else if skillButtonBase.frame.contains(location){
